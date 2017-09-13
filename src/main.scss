@@ -1,0 +1,235 @@
+/*=======================================================*/
+/*                        BANG
+/*       SHOPIFY COMPONENTS & STYLING FRAMEWORK
+/*             ©CUTTY BANG MULTIMEDIA 2017
+/*=======================================================*/
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+
+/*-------| GRIDLOCK || ©2017 CUTTY BANG |-------*/
+
+.gridlock                              { position: relative; width: 100%; margin: 0 auto; padding: 0;}
+.lane, .lanes                          { float: left; display: inline; margin-left: 10px; margin-right: 10px;}
+.row                                   { margin-bottom: 20px; }
+
+/* Nested lane Classes */
+.lane.alpha, .lanes.alpha              { margin-left: 0; }
+.lane.omega, .lanes.omega              { margin-right: 0; }
+
+/* Base Grid */
+.gridlock .one.lane,
+.gridlock .one.lanes                    { width: 4.66666666667%; }
+.gridlock .two.lanes                    { width: 13.3333333333%; }
+.gridlock .three.lanes                  { width: 22%;            }
+.gridlock .four.lanes                   { width: 30.6666666667%; }
+.gridlock .five.lanes                   { width: 39.3333333333%; }
+.gridlock .six.lanes                    { width: 48%;            }
+.gridlock .seven.lanes                  { width: 56.6666666667%; }
+.gridlock .eight.lanes                  { width: 65.3333333333%; }
+.gridlock .nine.lanes                   { width: 74.0%;          }
+.gridlock .ten.lanes                    { width: 82.6666666667%; }
+.gridlock .eleven.lanes                 { width: 91.3333333333%; }
+.gridlock .twelve.lanes                 { width: 100%; margin-left: 0; }
+
+.gridlock .one-third.lanes              { width: 30.6666666667%; }
+.gridlock .two-thirds.lanes             { width: 65.3333333333%; }
+.gridlock .one-fifth.lanes              { width: 19.2%; }
+
+/* Offsets */
+.gridlock .offset-by-one               { padding-left: 75px;  }
+.gridlock .offset-by-two               { padding-left: 150px; }
+.gridlock .offset-by-three             { padding-left: 225px; }
+.gridlock .offset-by-four              { padding-left: 300px; }
+.gridlock .offset-by-five              { padding-left: 375px; }
+.gridlock .offset-by-six               { padding-left: 450px; }
+.gridlock .offset-by-seven             { padding-left: 525px; }
+.gridlock .offset-by-eight             { padding-left: 600px; }
+.gridlock .offset-by-nine              { padding-left: 675px; }
+.gridlock .offset-by-ten               { padding-left: 750px; }
+.gridlock .offset-by-eleven            { padding-left: 825px; }
+
+
+/* Self Clearing Goodness */
+.gridlock:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+/* Use clearfix class on parent to clear nested lanes,
+or wrap each row of lanes in a <div class="row"> */
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0; }
+.row:after,
+.clearfix:after {
+  clear: both; }
+.row,
+.clearfix {
+  zoom: 1; }
+
+/* You can also use a <br class="clear" /> to clear lanes */
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+@media (max-width: 750px) {
+  .lane,
+  .lanes {
+    width: 95%;
+    box-sizing: border-box; }
+}
+
+/*-------| FLEXIBLE | ©2017 CUTTY BANG |-------*/
+
+.flexible {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.flex-item{
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.flexible.noWrap {
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.flexible-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.flexible-left {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+}
+
+.flexible-right {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+}
+
+.box {
+  margin: 50px 0 0;
+}
+
+
+/*-------| VALET | ©2017 CUTTY BANG |-------*/
+
+.valet { position: relative; width: 100%; margin: 0 auto; padding: 0 10px;}
+.valet.two { column-count: 2; column-width: auto; column-gap: 10px; }
+.valet.three { column-count: 3; column-width: auto; column-gap: 10px; }
+.valet.four { column-count: 4; column-width: auto; column-gap: 10px; }
+.valet.five { column-count: 5; column-width: auto; column-gap: 10px; }
+.valet.six { column-count: 6; column-width: auto; column-gap: 10px; }
+.valet.seven { column-count: 7; column-width: auto; column-gap: 10px; }
+.valet.eight { column-count: 8; column-width: auto; column-gap: 10px; }
+
+
+/*-------| THE PACKAGE | ©2017 CUTTY BANG |-------*/
+
+/*--------FILE UPLOAD--------*/
+
+.cbPackage {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+
+#cb-pkUL {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+#cb_pkUL-Label {
+  border: 3px solid #333;
+  font-size: 1rem;
+  font-weight: 700;
+  display: inline-block;
+  padding: 10px 10px;
+  cursor: pointer;
+  text-align: center;
+  &:hover {
+    color: darken(#333, 20%);
+    border-color: darken(#333, 20%);
+  }
+}
+
+#cb-pkDD {
+  width: 100%;
+}
+
+.cd-dropdown,
+.cd-select {
+	position: relative;
+	width: 100%
+	margin: 10px auto;
+	display: block;
+}

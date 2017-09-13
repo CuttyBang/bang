@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="">
+  <link rel="apple-touch-icon" href="">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="dist/main.css">
+  <style>
+  #navList {
+    list-style: none;
+  }
+  #navList li {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  #navList li:hover {
+    cursor: pointer;
+    color: #999;
+  }
+  .greetings {text-align: center}
+  </style>
+</head>
+<body>
+
+  <section id="ui">
+    <div>
+      <nav>
+        <ul id="navList">
+          <li><a href="/">Home</a></li>
+          <li><a href="file-upload.html">File Upload</a></li>
+          <li><a href="dropdown.html">DropDown</a></li>
+          <li><a href="/">Date Picker</a></li>
+          <li><a href="/">PO</a></li>
+        </ul>
+      </nav>
+    <div class="box">
+
+
+      <section id="cb-pk_UL">
+        <label>Upload File</label><br/>
+        <span style="color: #ccc;"><em>(custom shipping label, customs info, etc)</em></span>
+        <div class="cbPackage">
+          <input type="hidden" name="attributes[Custom Label Download Link]" id="cb-fileDL"  value="{{ cart.attributes['Custom Label Download Link'] }}" />
+          <label for="cb-pkUL" id="cb_pkUL-Label">Choose A File
+            <input type="file" name="cb-pkUL" id="cb-pkUL" class="" />
+          </label>
+        </div>
+      </section>
+
+    </div>
+  </section>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="dist/modernizr.custom.63321.js" charset="utf-8"></script>
+  <script src="dist/jquery.dropdown.js" charset="utf-8"></script>
+  <script src="dist/app.js" charset="utf-8"></script>
+</body>
+</html>

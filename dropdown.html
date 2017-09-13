@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="">
+  <link rel="apple-touch-icon" href="">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+
+  <link rel="stylesheet" href="dist/main.css">
+
+  <style>
+  #navList {
+    list-style: none;
+  }
+  #navList li {
+    margin: 0 10px;
+    display: inline-block;
+  }
+  #navList li:hover {
+    cursor: pointer;
+    color: #999;
+  }
+  .greetings {text-align: center}
+  </style>
+</head>
+<body>
+
+  <section id="ui">
+    <div style="width: 50vw; margin: 0 auto;">
+      <nav>
+        <ul id="navList">
+          <li><a href="/">Home</a></li>
+          <li><a href="file-upload.html">File Upload</a></li>
+          <li><a href="dropdown.html">DropDown</a></li>
+          <li><a href="/">Date Picker</a></li>
+          <li><a href="/">PO</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="box">
+      <section class="cbPackage cb-pk_DD" >
+        <label>Dropdown Selection</label><br/>
+        <select id="cd-dropdown" name="attributes[Cost Center]" class="cd-select">
+          <option value="-1" selected>Choose your favorite animal</option>
+          <option value="1" class="monkey">Monkey</option>
+          <option value="2" class="bear">Bear</option>
+          <option value="3" class="squirrel">Squirrel</option>
+          <option value="4" class="elephant">Elephant</option>
+        </select>
+      </section>
+
+
+    </div>
+  </section>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="dist/modernizr.custom.63321.js" charset="utf-8"></script>
+  <script src="dist/jquery.dropdown.js" charset="utf-8"></script>
+  <script src="dist/app.js" charset="utf-8"></script>
+</body>
+</html>
