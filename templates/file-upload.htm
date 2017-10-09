@@ -1,0 +1,21 @@
+<script id="file-upload" type="text/html">
+
+    <section class="cb_FileUpload">
+      <p class="cb_pkgComponentLabel">Upload File</p>
+      <span class="cb_pkgComponentSubLabel">(custom shipping label, customs info, etc)</span>
+
+      <div class="cb_pkgComponent">
+
+        <input type="hidden" name="attributes[Custom Label Download Link]" value="{{ cart.attributes['Custom Label Download Link'] }}" />
+        <label for="cb_pkgFileUpload" id="cb_pkgUploadLabel">Choose A File
+          <input type="file" name="cb_pkgFileUpload" id="cb_pkgFileUpload" class="" />
+        </label>
+        
+      </div>
+
+    </section>
+    <div class="cb_siteFooterCopyright .cb_siteFooterText" >
+      <p><i>&copy; {{name}} 2017</i></p>
+    </div>
+
+</script>

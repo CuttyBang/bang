@@ -1,1 +1,1 @@
-"use strict";$(document).ready(function(){$("#cd-dropdown").dropdown({gutter:5})});
+"use strict";$(document).ready(function(){var o={name:"Bang Framework"};$.Mustache.load("../templates/file-upload.htm").done(function(){console.log("file-upload Loaded")}),$.Mustache.load("../templates/drop-down.htm").done(function(){console.log("drop-down Loaded")}),$("#navFile").click(function(){console.log("click"),$("#viewBoxes").mustache("file-upload",o,{method:"html"})}),$("#navDrop").click(function(){console.log("click"),$("#viewBoxes").mustache("drop-down",o,{method:"html"})})});

@@ -1,0 +1,63 @@
+body {
+ font-family: 'BrandonGrotesque-Regular', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif ;
+}
+.cb_navWrapper {
+  margin: 25px 0 0 20px;
+}
+
+#cb_navList {
+  list-style: none;
+}
+
+#cb_navList li {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+#cb_navList li a {
+  text-decoration: none;
+}
+
+#cb_navList li:hover {
+  cursor: pointer;
+  color: #999;
+}
+.add__Greetings {
+  text-align: center;
+}
+
+.add__Greetings h1 {
+ font-family: 'BrandonGrotesque-Regular', 'Helvetiva Neue', sans-serif;
+  font-weight: bold;
+}
+
+.box {
+  margin: 50px 0 20px;
+  border-bottom: 1px solid #aaa;
+}
+
+.viewBoxes {
+  padding: 25px;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+#cb_cntHomePane {
+  width: 80vw;
+  height: 100vw;
+  margin: 0 auto;
+}
+
+
+@font-face {
+  font-family: 'BrandonGrotesque-Regular';
+  src: url('http://apps.cuttybang.audio/bang/fonts/BrandonGrotesque-Regular.eot');
+  src: url('http://apps.cuttybang.audio/bang/fonts/BrandonGrotesque-Regular.eot?iefix') format('eot'),
+       url('http://apps.cuttybang.audio/bang/fonts/BrandonGrotesque-Regular.woff') format('woff'),
+       url('http://apps.cuttybang.audio/bang/fonts/BrandonGrotesque-Regular.ttf') format('truetype'),
+       url('http://apps.cuttybang.audio/bang/fonts/BrandonGrotesque-Regular.svg#webfontZam02nTh') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

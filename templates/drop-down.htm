@@ -1,0 +1,78 @@
+<script id="drop-down" type="text/html">
+
+  <section class="cb_Dropdown" >
+    <p class="cb_pkgComponentLabel">Deptartment/Cost Center</p>
+    <span class="cb_pkgComponentSubLabel">(department to be billed for this purchase)</span>
+
+    <div class="cb_pkgComponent">
+
+        <div class="cb_pkgDropdown">
+          <button class="cb_btn cb_pkgDropdownButton">Choose one... <span id="cb_utilButtonCaret" class="cb_btn cb_utilCarat"></span></button>
+
+          <div id="cb_pkgDropdownContent" class="cb_pkgDropdownContent">
+
+            <div class="cb_pkgDropdownOption">
+              <span>
+                <input type="radio" id="Department-1" value="Department 1" class="cb_pkgDropdownOptionRadio" name="attributes[Cost Center]" {% if cart.attributes["Cost Center"] == "Department 1" %}selected{% endif %} />
+                <label for="Department-1">Department 1</label>
+              </span>
+            </div>
+
+            <div class="cb_pkgDropdownOption">
+              <span>
+                <input type="radio" id="Department-2" value="Department 2" class="cb_pkgDropdownOptionRadio" name="attributes[Cost Center]" {% if cart.attributes["Cost Center"] == "Department 2" %}selected{% endif %} />
+                <label for="Department-2">Department 2</label>
+              </span>
+            </div>
+
+            <div class="cb_pkgDropdownOption">
+              <span>
+                <input type="radio" id="Department-3" value="Department 3" class="cb_pkgDropdownOptionRadio" name="attributes[Cost Center]" {% if cart.attributes["Cost Center"] == "Department 2" %}selected{% endif %} />
+                <label for="Department-3">Department 3</label>
+              </span>
+            </div>
+
+          </div>
+
+        </div>
+
+    </div>
+  </section>
+  <script>
+      var $dropButton = $('.cb_btn');
+
+      function _dropDown() {
+        document.getElementById('cb_pkgDropdownContent').classList.toggle('cb_Show');
+        document.getElementById('cb_utilButtonCaret').classList.toggle('cb_utilUpCarat');
+      }
+
+      $dropButton.mousedown(function() {
+        _dropDown();
+      });
+
+      window.onclick = function(event) {
+        if (!event.target.matches('.cb_pkgDropdownButton')) {
+          var btnCaret = document.getElementById('cb_utilButtonCaret');
+          var dropdowns = document.getElementsByClassName("cb_pkgDropdownContent");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('cb_Show')) {
+              openDropdown.classList.remove('cb_Show');
+            }
+          }
+          if(btnCaret.classList.contains('cb_utilUpCarat')){
+            btnCaret.classList.remove('cb_utilUpCarat');
+          }
+        }
+      }
+      $('.cb_pkgDropdownOption span').click(function(){
+        $(this).children('input').prop('checked', 'true');
+      });
+  </script>
+
+  <div class="cb_siteFooterCopyright .cb_siteFooterText" >
+    <p><i>&copy; {{name}} 2017</i></p>
+  </div>
+
+</script>

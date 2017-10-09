@@ -1,280 +1,105 @@
-
-
-*,
-*:after,
-*:before {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+/* DROPDOWN
+-----------------------*/
+.cb_pkgDropdown {
+  width: 300px;
+  display: block;
+  border: 1px solid #999;
+  padding: 20px;
 }
 
-/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.clearfix:before,
-.clearfix:after {
-	content: " ";
-	display: table;
+.cb_pkgDropdown {
+  width: inherit;
 }
 
-.clearfix:after {
-	clear: both;
+.cb_pkgDropdownButton {
+  border: 3px solid #333;
+  background: #fff;
+  color: #333;
+  font-size: 1.25rem;
+  height: 60px;
+  width: 300px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.clearfix {
-	*zoom: 1;
+.cb_pkgDropdownContent {
+  width: 300px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-body {
-	font-family: 'Lato', Calibri, Arial, sans-serif;
-	background: #f4f4f4 url(../images/grid_DominikKiss_SubtlePatterns.jpg);
-	font-weight: 300;
-	font-size: 15px;
-	color: #333;
-	overflow: scroll;
-	overflow-x: hidden;
+.cb_pkgDropdownButton:hover {
+  border: 3px solid #666;
+  color: #888;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
 }
 
-a {
-	color: #555;
-	text-decoration: none;
+.cb_pkgDropdownButton:focus {
+  outline: none;
 }
 
-.container {
-	width: 100%;
-	position: relative;
+.cb_pkgDropdownOption {
+  position: relative;
+  left: 0;
+  width: inherit;
+  text-align: center;
+  height: 60px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
-.main,
-.container > header {
-	width: 90%;
-	max-width: 960px;
-	margin: 0 auto;
-	position: relative;
-	padding: 0 10px;
+.cb_pkgDropdownOption:hover {
+  cursor: pointer;
+  background: #dcdcdc;
 }
 
-.container > header {
-	padding: 40px 10px 50px;
-	border-bottom: 1px solid #ddd;
-	box-shadow: 0 1px rgba(255,255,255,0.8);
-	margin-bottom: 30px;
+.cb_pkgDropdownOption span {
+  display: block;
+  font-size: 1.25rem;
+  color: #333;
+  padding: 20px 0;
 }
 
-.container > header h1 {
-	font-size: 34px;
-	line-height: 38px;
-	margin: 0;
-	font-weight: 700;
-	color: #333;
-	float: left;
+.cb_pkgDropdownOptionRadio {
+  display: none;
 }
 
-.container > header h1 span {
-	display: block;
-	font-size: 20px;
-	font-weight: 300;
+.cb_pkgDropdownOptionRadio:checked + label {
+  color: red;
 }
 
-.fleft {
-	float: left;
-	width: 49%;
-	min-width: 300px;
-}
-
-.main p {
-	color: #AAA;
-	padding: 20px 30px 0px 0px;
-	font-size: 20px;
-	line-height: 34px;
-	font-weight: 300;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
-}
-
-/* Header Style */
-.codrops-top {
-	line-height: 24px;
-	font-size: 11px;
-	background: #fff;
-	background: rgba(255, 255, 255, 0.5);
-	text-transform: uppercase;
-	z-index: 9999;
-	position: relative;
-	box-shadow: 1px 0px 2px rgba(0,0,0,0.2);
-}
-
-.codrops-top a {
-	padding: 0px 10px;
-	letter-spacing: 1px;
-	color: #333;
-	display: inline-block;
-}
-
-.codrops-top a:hover {
-	background: rgba(255,255,255,0.8);
-	color: #000;
-}
-
-.codrops-top span.right {
-	float: right;
-}
-
-.codrops-top span.right a {
-	float: left;
-	display: block;
-}
-
-/* Demo Buttons Style */
-.codrops-demos {
-	float: right;
-	padding-top: 10px;
-}
-
-.codrops-demos a {
-	display: inline-block;
-	margin: 10px;
-	color: #666;
-	font-weight: 700;
-	line-height: 30px;
-	border-bottom: 4px solid transparent;
-}
-
-.codrops-demos a:hover {
-	color: #000;
-	border-color: #000;
-}
-
-.codrops-demos a.current-demo,
-.codrops-demos a.current-demo:hover {
-	color: #aaa;
-	border-color: #aaa;
-}
+/*-------| UTILITIES | ©2017 CUTTY BANG |-------*/
 
 
-@media screen and (max-width: 730px){
-	.fleft {
-		width: 100%;
-		float: none;
-		text-align: center;
-	}
-}
-.cd-dropdown,
-.cd-select {
-	position: relative;
-	width: 300px;
-	margin: 20px auto;
-	display: block;
+.cb_utilCarat {
+  float: right;
+  margin-right: 10px;
+  border-left: 1px solid #333;
 }
 
-.cd-dropdown > span {
-	width: 100%;
-	height: 60px;
-	line-height: 60px;
-	color: #999;
-	font-weight: 700;
-	font-size: 16px;
-	background: #fff;
-	display: block;
-	padding: 0 50px 0 30px;
-	position: relative;
-	cursor: pointer;
+.cb_utilCarat:after {
+  float: right;
+  content: '\2228';
 }
 
-.cd-dropdown > span:after {
-	content: '\25BC';
-	position: absolute;
-	right: 0px;
-	top: 15%;
-	width: 50px;
-	text-align: center;
-	font-size: 12px;
-	padding: 10px;
-	height: 70%;
-	line-height: 24px;
-	border-left: 1px solid #ddd;
+.cb_utilUpCarat {
+  float: right;
+  margin-right: 10px;
 }
 
-.cd-dropdown.cd-active > span:after {
-	content: '\25B2';
+.cb_utilUpCarat:after {
+  float: right;
+  content: '\2227';
 }
 
-.cd-dropdown ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	display: block;
-	position: relative;
+.cb_Hide {
+  display: none;
 }
 
-.cd-dropdown ul li {
-	display: block;
-}
-
-.cd-dropdown ul li span {
-	width: 100%;
-	background: #fff;
-	line-height: 60px;
-	padding: 0 30px 0 75px;
-	display: block;
-	color: #bcbcbc;
-	cursor: pointer;
-	font-weight: 700;
-}
-
-.cd-dropdown > span,
-.cd-dropdown ul li span {
-	-webkit-backface-visibility: hidden;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-}
-
-.cd-dropdown > span span[class^="icon-"],
-.cd-dropdown > span span[class*=" icon-"]{
-	padding: 0 30px 0 45px;
-}
-
-/* Select fallback styling */
-.cd-select {
-	border: 1px solid #ddd;
-}
-.cd-dropdown > span,
-.cd-dropdown ul li:nth-last-child(-n+3) span {
-	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-}
-
-.cd-dropdown ul {
-	position: absolute;
-	top: 0px;
-	width: 100%;
-}
-
-.cd-dropdown ul li {
-	position: absolute;
-	width: 100%;
-}
-
-.cd-active.cd-dropdown > span {
-	color: #fc756f;
-}
-
-.cd-active.cd-dropdown > span,
-.cd-active.cd-dropdown ul li span {
-	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
-}
-
-.cd-active.cd-dropdown ul li span {
-	-webkit-transition: all 0.2s linear 0s;
-	-moz-transition: all 0.2s linear 0s;
-	-ms-transition: all 0.2s linear 0s;
-	-o-transition: all 0.2s linear 0s;
-	transition: all 0.2s linear 0s;
-}
-
-.cd-active.cd-dropdown ul li span:hover {
-	background: #fc756f;
-	color: #fff;
+.cb_Show {
+  display:block;
 }

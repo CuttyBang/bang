@@ -13,50 +13,41 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+  <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="dist/main.css">
-  <style>
-  #navList {
-    list-style: none;
-  }
-  #navList li {
-    margin: 0 10px;
-    display: inline-block;
-  }
-  #navList li:hover {
-    cursor: pointer;
-    color: #999;
-  }
-  .greetings {text-align: center}
-  </style>
+  <link rel="stylesheet" href="buildStyles.css">
 </head>
 <body>
 
   <section id="ui">
-    <div>
+    <div class="cb_navWrapper">
       <nav>
-        <ul id="navList">
-          <li><a href="/">Home</a></li>
-          <li><a href="file-upload.html">File Upload</a></li>
-          <li><a href="dropdown.html">DropDown</a></li>
-          <li><a href="/">Date Picker</a></li>
-          <li><a href="/">PO</a></li>
+        <ul id="cb_navList">
+          <li><a id="navHome" href="/">Home</a></li>
+          <li><a id="navFile" href="#">File Upload</a></li>
+          <li><a id="navDrop" href="#">DropDown</a></li>
+          <li><a id="navDate" href="#">Date Picker</a></li>
+          <li><a id="navPO" href="#">PO</a></li>
         </ul>
       </nav>
     </div>
 
     <div class="box">
-      <div class="greetings">
+      <div class="add__Greetings">
         <h1>Welcome to the BANG framework!</h1>
       </div>
-
+    </div>
+    <div id="cb_cntHomePane" class="flexible">
+      <div id="viewBoxes">
+      </div>
     </div>
   </section>
-  <!--script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script-->
-  <script src="dist/vendor.js" charset="utf-8"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  <script src="dist/assets/vendor.js" charset="utf-8"></script>
   <script src="dist/app.js" charset="utf-8"></script>
 
 </body>

@@ -1,6 +1,8 @@
+
 /*=======================================================*/
 /*                        BANG
 /*       SHOPIFY COMPONENTS & STYLING FRAMEWORK
+/*                      BANG.CSS
 /*             ©CUTTY BANG MULTIMEDIA 2017
 /*=======================================================*/
 *,
@@ -14,7 +16,7 @@
 }
 
 
-/*-------| GRIDLOCK || ©2017 CUTTY BANG |-------*/
+/*================================| GRIDLOCK || ©2017 CUTTY BANG |================================*/
 
 .gridlock                              { position: relative; width: 100%; margin: 0 auto; padding: 0;}
 .lane, .lanes                          { float: left; display: inline; margin-left: 10px; margin-right: 10px;}
@@ -96,7 +98,10 @@ or wrap each row of lanes in a <div class="row"> */
     box-sizing: border-box; }
 }
 
-/*-------| FLEXIBLE | ©2017 CUTTY BANG |-------*/
+
+
+/*================================| FLEXIBLE | ©2017 CUTTY BANG |================================*/
+
 
 .flexible {
   padding: 0;
@@ -171,12 +176,11 @@ or wrap each row of lanes in a <div class="row"> */
 	        justify-content: flex-end;
 }
 
-.box {
-  margin: 50px 0 0;
-}
 
 
-/*-------| VALET | ©2017 CUTTY BANG |-------*/
+
+/*================================| VALET | ©2017 CUTTY BANG |================================*/
+
 
 .valet { position: relative; width: 100%; margin: 0 auto; padding: 0 10px;}
 .valet.two { column-count: 2; column-width: auto; column-gap: 10px; }
@@ -188,18 +192,34 @@ or wrap each row of lanes in a <div class="row"> */
 .valet.eight { column-count: 8; column-width: auto; column-gap: 10px; }
 
 
-/*-------| THE PACKAGE | ©2017 CUTTY BANG |-------*/
 
-/*--------FILE UPLOAD--------*/
+/*================================| THE PACKAGE | ©2017 CUTTY BANG |================================*/
 
-.cbPackage {
+
+/* PACKAGE STYLING
+-------------------------*/
+.cb_pkgComponent {
   padding: 10px;
   border: 1px solid #ccc;
-  width: 300px;
+  width: 320px;
 }
 
+.cb_pkgComponentLabel {
+	font-weight: 600;
+	margin-bottom: 0;
+}
 
-#cb-pkUL {
+.cb_pkgComponentSubLabel {
+	font-size: 0.80rem;
+	font-weight: 300;
+	color: #999;
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+/* FILE UPLOAD
+-------------------------*/
+#cb_pkgFileUpload { /* Special component ID for custom file input styling*/
   width: 0.1px;
   height: 0.1px;
   opacity: 0;
@@ -208,10 +228,11 @@ or wrap each row of lanes in a <div class="row"> */
   z-index: -1;
 }
 
-#cb_pkUL-Label {
+#cb_pkgUploadLabel {/* Special label ID for custom file input styling*/
   border: 3px solid #333;
   font-size: 1rem;
   font-weight: 700;
+	width: 300px;
   display: inline-block;
   padding: 10px 10px;
   cursor: pointer;
@@ -222,14 +243,225 @@ or wrap each row of lanes in a <div class="row"> */
   }
 }
 
-#cb-pkDD {
-  width: 100%;
+
+/* DROPDOWN
+-----------------------*/
+.cb_pkgDropdown {
+  width: 300px;
+  display: block;
 }
 
-.cd-dropdown,
-.cd-select {
-	position: relative;
-	width: 100%
-	margin: 10px auto;
-	display: block;
+.cb_pkgDropdown {
+  width: inherit;
 }
+
+.cb_pkgDropdownButton {
+  border: 3px solid #333;
+  background: #fff;
+  color: #333;
+  font-size: 1.25rem;
+  height: 60px;
+  width: 300px;
+  padding: 0 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.cb_pkgDropdownContent {
+  width: 300px;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.cb_pkgDropdownButton:hover {
+  border: 3px solid #666;
+  color: #888;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.2);
+}
+
+.cb_pkgDropdownButton:focus {
+  outline: none;
+}
+
+.cb_pkgDropdownOption {
+  position: relative;
+  left: 0;
+  width: inherit;
+  text-align: center;
+  height: 60px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+	span {
+	  display: block;
+	  font-size: 1.25rem;
+	  color: #333;
+	  padding: 20px 0;
+	}
+
+	&:hover {
+		cursor: pointer;
+		background: #dcdcdc;
+	}
+}
+
+.cb_pkgDropdownOptionRadio {
+  display: none;
+}
+
+.cb_pkgDropdownOptionRadio:checked + label {
+  color: red;
+}
+
+
+
+/*================================| PRODUCT PAGE | ©2017 CUTTY BANG |================================*/
+
+
+/* ADD TO CART TABLE
+-----------------------*/
+
+.cb_addToCartSection {
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+.cb_addToCart {
+  margin: 0 0 30px;
+}
+
+.cb_atcVariantLabel {
+  margin: 10px 0 0;
+}
+
+
+/* INVENTORY TABLE
+-----------------------*/
+
+.cb_invBlankCell {
+  background-color: #f9f9f9;
+  background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(153,153,153,.1) 10px, rgba(153,153,153,.1) 20px);
+}
+
+.cb_invHeaderCell, .cb_invDataCell {
+  text-align: center;
+}
+
+.cb_invHeaderRow {
+  background-color: #f9f9f9;
+}
+
+
+/*================================| PASSWORD PAGE | ©2017 CUTTY BANG |================================*/
+
+
+
+.cb_pwdHeaderLogo {
+  margin: 0 auto;
+  width: 60vw;
+  max-width: 600px;
+}
+
+.cb_pwdHeaderLogo-img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.cb_pwdModalLogo {
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 800px;
+}
+
+.cb_pwdModalLogo-img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.cb_pwdHeadline {
+  margin: 20px 0 0;
+}
+
+.cb_pwdModalLogoWrapper {
+  margin-top: 200px;
+}
+
+.cb_pwdModalContent {
+  transform: translateY(-50%);
+  position: relative;
+  top: 20%;
+}
+
+
+
+/*-------| SITEWIDE | ©2017 CUTTY BANG |-------*/
+
+
+
+/* FOOTER
+-----------------------*/
+
+.cb_siteFooter {
+  text-align: center;
+  font-size: 0.75em;
+
+}
+
+.cb_siteFooterCopyright {
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.cb_siteFooterLink {
+  font-weight: 600;
+}
+
+.cb_siteFooterLink-Shop {
+  margin-bottom: 0;
+}
+
+
+
+
+/*-------| UTILITIES | ©2017 CUTTY BANG |-------*/
+
+.cb_utilCarat {
+  float: right;
+  margin-right: 10px;
+}
+
+.cb_utilCarat:after {
+  float: right;
+  content: '\2228';
+}
+
+.cb_utilUpCarat {
+  float: right;
+  margin-right: 10px;
+}
+
+.cb_utilUpCarat:after {
+  float: right;
+  content: '\2227';
+}
+
+.cb_Hide {
+  display: none;
+}
+
+.cb_Show {
+  display:block;
+}
+
+
+
+/* NEW ADDITIONS
+================================*/
