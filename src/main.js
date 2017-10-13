@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var viewData = {name: 'Bang Framework'};
+  var viewData = {name: 'Bang Framework', chkbx__label1: 'Include a return Label?'};
 
 
   $.Mustache.load('../templates/file-upload.htm').done(function(){
@@ -7,6 +7,9 @@ $(document).ready(function() {
   });
   $.Mustache.load('../templates/drop-down.htm').done(function(){
     console.log('drop-down Loaded');
+  });
+  $.Mustache.load('../templates/checkbox.htm').done(function(){
+    console.log('checkbox Loaded');
   });
 
 
@@ -18,7 +21,11 @@ $(document).ready(function() {
    console.log("click");
    $('#viewBoxes').mustache('drop-down', viewData, { method: 'html' });
  });
+ $('#navCheck').click(function() {
+   console.log("click");
+   $('#viewBoxes').mustache('checkbox', viewData, { method: 'html' });
+ });
 
- 
+
 
 });

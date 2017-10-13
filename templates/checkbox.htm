@@ -1,7 +1,12 @@
 <script id="checkbox" type="text/html">
 
   <section class="cb_Checkbox" >
-
+    <div id="cb_pkgCheckbox--ReturnLabel" class="cb_pkgComponent" >
+      <input type="hidden" name="attributes[Return Label]" value="No" />
+      <input type="checkbox" name="attributes[Return Label]" value="Yes"{% if cart.attributes["Return Label"] == "Yes" %} checked{% endif %}/>
+      <label class="cb_pkgComponentLabel-inline"><b>{{chkbx__label1}}</b></label>
+      <p style="color: #ccc;"><em>{{chkbx__label2}}</em></p>
+    </div>
   </section>
   <div class="cb_siteFooterCopyright .cb_siteFooterText" >
     <p><i>&copy; {{name}} 2017</i></p>

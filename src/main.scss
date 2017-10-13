@@ -209,6 +209,13 @@ or wrap each row of lanes in a <div class="row"> */
 	margin-bottom: 0;
 }
 
+.cb_pkgComponentLabel-inline {
+	font-weight: 600;
+	margin-bottom: 0;
+	display:inline;
+	margin-left:15px;
+}
+
 .cb_pkgComponentSubLabel {
 	font-size: 0.80rem;
 	font-weight: 300;
@@ -314,6 +321,12 @@ or wrap each row of lanes in a <div class="row"> */
 
 .cb_pkgDropdownOptionRadio:checked + label {
   color: red;
+}
+
+/* CHECKBOX
+------------------*/
+.cb_pkgCheckbox {
+	margin-bottom: 0 !important;
 }
 
 
