@@ -3,17 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title></title>
+  <title>Bang Framework</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="icon" href="">
+  <link rel="icon" href="dist/assets/favicon.png">
   <link rel="apple-touch-icon" href="">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-  <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" href="dist/main.css">
   <link rel="stylesheet" href="buildStyles.css">
@@ -35,6 +33,9 @@
     </div>
 
     <div class="box">
+      <div class="cb_logoWrap">
+          <img src="dist/assets/logo.png" alt="">
+      </div>
       <div class="add__Greetings">
         <h1>Welcome to the BANG framework!</h1>
       </div>
@@ -48,8 +49,24 @@
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+  <script src="./pickdate.min.js" charset="utf-8"></script>
   <script src="dist/assets/vendor.js" charset="utf-8"></script>
   <script src="dist/app.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      pickmeup('.cb_pkgDatepickerComponent');
+
+      pickmeup('.cb_pkgDatepickerComponentt', {
+      	format	: 'Y-m-d'
+      });
+
+      $('.cb_pkgDatePickerComponent').on('click', ()=>{
+        pickmeup('.date').show();
+      })
+
+    });
+  </script>
 
 </body>
 </html>

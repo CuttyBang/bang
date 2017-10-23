@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  var viewData = {name: 'Bang Framework', chkbx__label1: 'Include a return Label?'};
+$(document).ready(() => {
+  const viewData = {name: 'Bang Framework', chkbx__label1: 'Include a return Label?'};
 
 
   $.Mustache.load('../templates/file-upload.htm').done(function(){
@@ -10,6 +10,9 @@ $(document).ready(function() {
   });
   $.Mustache.load('../templates/checkbox.htm').done(function(){
     console.log('checkbox Loaded');
+  });
+  $.Mustache.load('../templates/datepicker.htm').done(function(){
+    console.log('datepicker Loaded');
   });
 
 
@@ -25,7 +28,26 @@ $(document).ready(function() {
    console.log("click");
    $('#viewBoxes').mustache('checkbox', viewData, { method: 'html' });
  });
+ $('#navDate').click(function() {
+   console.log("click");
+   $('#viewBoxes').mustache('datepicker', viewData, { method: 'html' });
+ });
 
+pickmeup('.cb_pkgDatepickerComponent');
+
+pickmeup('.cb_pkgDatepickerComponentt', {
+	format	: 'Y-m-d'
+});
+
+$('.cb_pkgDatePickerComponent').on('click', ()=>{
+  pickmeup('.date').show();
+})
+
+
+
+ // $('#cb_pkgDatepickerComponent').on('click', () =>{
+ //   datepicker.show();
+ // });
 
 
 });
