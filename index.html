@@ -44,6 +44,11 @@
       <div id="viewBoxes">
       </div>
     </div>
+    <section class="cb_Datepicker">
+      <div class="cb_pkgComponent">
+        <input type="text" value="today's date" class="cb_pkgDatepickerComponent" id="cb_pkgDatePickerComponent"/>
+      </div>
+    </section>
   </section>
   <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -53,18 +58,11 @@
   <script src="dist/assets/vendor.js" charset="utf-8"></script>
   <script src="dist/app.js" charset="utf-8"></script>
   <script type="text/javascript">
-    $(document).ready(function() {
-
-      pickmeup('.cb_pkgDatepickerComponent');
-
-      pickmeup('.cb_pkgDatepickerComponentt', {
-      	format	: 'Y-m-d'
+    addEventListener('DOMContentLoaded', ()=>{
+      pickmeup('.cb_pkgDatepickerComponent', {
+        position       : 'right',
+        hide_on_select : true
       });
-
-      $('.cb_pkgDatePickerComponent').on('click', ()=>{
-        pickmeup('.date').show();
-      })
-
     });
   </script>
 
